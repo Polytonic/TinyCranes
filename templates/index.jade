@@ -1,0 +1,50 @@
+doctype html
+html
+
+    head
+
+        //- Define Page Attributes
+        title TinyCranes • Index
+        meta(charset="utf-8")
+        meta(name="viewport" content="minimal-ui, width=device-width")
+        meta(name="author" content="Kevin Fung")
+        meta(name="description" content="Freelance web development and software engineering. I make things. Let's chat!")
+
+        //- Load Typekit Web Fonts
+        script(src="//use.typekit.net/igt0vbc.js")
+        script try{Typekit.load();}catch(e){}
+
+        //- Load Required Stylesheets
+        link(rel="stylesheet" href="index.css")
+
+    body
+
+        //- Vertically Centered Contents
+        section.wrapper
+            div.middle(data-scroll-reveal="enter top after 0.15s over 1s")
+
+                //- Masthead
+                h1.title Design is Visceral
+                h3.subtitle Hey, I'm Kevin. I make elegant things.
+                a.contact(href="mailto:mail@tinycranes.com") Contact Me
+
+                //- Headlines
+                aside.muted
+                    h4.cycle Full-Stack Web Developer
+                    h4.cycle Creative Problem-Solver
+                    h4.cycle Aspiring Game Designer
+                    h4.cycle Origami Enthusiast
+
+            //- Navigation
+            nav.links
+                div.inline(data-scroll-reveal="enter bottom after 1s over 1s")
+                    a.cutout(href="#about") About
+                div.inline(data-scroll-reveal="enter bottom after 1.5s over 1s")
+                    a.cutout(href="#portfolio") Portfolio
+                div.inline(data-scroll-reveal="enter bottom after 2s over 1s")
+                    a.cutout(href="//github.com/Polytonic/" target="_blank") GitHub
+
+        //- Load Required Scripts
+        script(src="bower_components/jquery/dist/jquery.min.js")
+        script(src="bower_components/scroll-reveal/dist/scrollReveal.min.js")
+        script(src="index.js")

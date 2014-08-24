@@ -1,0 +1,92 @@
+// Third-Party Libraries
+@import "nib"
+global-reset()
+
+// Local Dependencies
+@import "colors"
+@import "layout"
+@import "queries"
+
+.logo
+
+    height 24px
+    width 24px
+    background grey
+    margin 0 auto
+
+.title
+
+    color ivory
+    font-family "futura-pt"
+    font-variant small-caps
+    font-weight bold
+    text-rendering auto
+
+.subtitle
+
+    color ivory
+    margin 1vh 0vh
+
+.contact
+
+    background brick
+    border-radius 0.125rem
+    box-shadow 0rem 0.175rem 0.5em rgba(0, 0, 0, 0.1)
+    color cream
+    display inline-block
+    font-family "futura-pt"
+    font-weight bold
+    letter-spacing 0.125rem
+    padding 0.90rem 1.75rem
+    text-decoration none
+    text-transform uppercase
+    text-rendering auto
+    transition all 0.25s ease-out
+
+    &:hover
+
+        background-color flame
+
+    &:active
+
+        background-color flame - slate - slate
+
+.muted
+
+    color slate + slate
+    font-weight bolder
+    margin-top 0.75rem
+
+.cycle
+
+    display none
+
+.links
+
+    absolute bottom 2.25rem left 0 right 0
+    font-size 0.75rem
+
+.inline
+    display inline-block
+
+.cutout
+
+    border 3px solid
+    color slate + slate
+    display inline-block
+    font-family "futura-pt"
+    font-weight bold
+    padding 0.25rem 0.4rem
+    min-width 3rem
+    margin auto 0.25rem
+    text-decoration none
+    text-transform uppercase
+    transition all 0.25s ease-in-out
+
+    &:hover
+
+        color slate + slate + slate
+
+    &:active
+
+        color brick
