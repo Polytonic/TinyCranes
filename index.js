@@ -1,0 +1,1 @@
+(function(){var e,l,n;window.scrollReveal=new scrollReveal({reset:!0}),n=function(){return++e,l.eq(e%l.length).fadeIn(1e3).delay(8500).fadeOut(500,n)},l=$(".cycle"),e=-1,n()}).call(this);
