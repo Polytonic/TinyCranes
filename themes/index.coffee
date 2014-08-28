@@ -1,5 +1,6 @@
 window.scrollReveal = new scrollReveal
   reset: true
+  viewportFactor: 0.1
 
 showNextQuote = ->
   ++quoteIndex
@@ -24,4 +25,11 @@ $ ->
         , 750
         false
 
-  return
+$(".carousel-flows").slick
+  infinite: true
+  slidesToShow: 1
+  dots: true
+  arrows: false
+  autoplay: true
+  lazyLoad: "ondemand"
+  # fade: true
