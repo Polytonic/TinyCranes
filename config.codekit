@@ -1195,11 +1195,11 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/index.css": {
-		"fileType": 16,
+	"\/index.html": {
+		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.css",
+		"inputAbbreviatedPath": "\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
