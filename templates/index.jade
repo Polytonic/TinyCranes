@@ -2,21 +2,20 @@ doctype html
 html
 
     head
+
         // This is the dirtiest code I have ever shipped ... (ಠ_ಠ)
         //- Define Page Attributes
         title TinyCranes • Index
         meta(charset="utf-8")
         meta(name="viewport" content="minimal-ui, width=device-width")
         meta(name="author" content="Kevin Fung")
-        meta(name="description" content="Freelance web development and software engineering. I make things. Let's chat!")
+        meta(name="description" content="Freelance design and software development. I make elegant things. Let's chat!")
 
         //- Load Typekit Web Fonts
         script(src="//use.typekit.net/igt0vbc.js")
         script try{Typekit.load();}catch(e){}
 
         //- Load Required Stylesheets
-        link(rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css")
-        link(rel="stylesheet" href="//yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css")
         link(rel="stylesheet" href="index.css")
 
     body
@@ -47,16 +46,21 @@ html
          //- Include Portfolio Pieces
         section.container#portfolio
 
-            //- div.pure-g
-                include flows
-                //- include flows
-                //- include flows
-                //- Invisible Element to Left-Align on Odd Numbers
-                div.pure-u-1.pure-u-sm-1-1.pure-u-md-2-5.pure-u-lg-3-10
-
             div.pure-g
-                include mockingbird
+                include flows
+                include winter
+                include sticks-and-stones
+                include trajectory
+                include midnight
+                include fidelis
+                include goliath
+                include footsteps
+                include apostrophe
+                include vertigo
+                include rotary
+                include monotony
                 include lost-manuscript
+                include mockingbird
                 //- Invisible Element to Left-Align on Odd Numbers
                 div.pure-u-1.pure-u-sm-1-1.pure-u-md-2-5.pure-u-lg-3-10
 

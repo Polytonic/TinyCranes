@@ -28,9 +28,13 @@ html, body
 
     height 100%
 
+.carousel
+
+    box-shadow 0rem 1px 1px rgba(0, 0, 0, 0.1)
+    background slate
+
 .container
 
-    // min-height 100vh
     position relative
     z-index 100
     box-shadow 0rem 0.5rem 1.5rem black
@@ -43,7 +47,6 @@ html, body
     box-shadow 0 0.1rem 0.25rem #aaa
     background cream
     text-align left
-    // min-height 19em
 
 .slide
 
@@ -52,6 +55,7 @@ html, body
 .banner
 
     text-align center
+    margin 0em auto
 
 
 .project-title
@@ -74,6 +78,21 @@ html, body
     padding 1em
     color slate
     text-rendering geometricPrecision
+    line-height 1.2rem
+
+    a:link, a:visited
+
+        text-decoration none
+        font-weight bolder
+        color brick - slate
+
+    a:hover
+
+        text-decoration underline
+
+    a:active
+
+        color flame
 
 .button
 
@@ -85,9 +104,9 @@ html, body
     font-family "futura-pt"
     font-weight bold
     font-size 0.85rem
-    letter-spacing 0.125rem
-    min-width 80px
-    padding 0.5em
+    letter-spacing 0.1rem
+    min-width 65px
+    padding 0.5em 1em
     margin 0.5rem
     margin-top 1rem
     vertical-align bottom
