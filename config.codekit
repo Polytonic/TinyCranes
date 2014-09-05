@@ -35,6 +35,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/assets\/hunt-and-peck1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 99398,
+		"inputAbbreviatedPath": "\/assets\/hunt-and-peck1.png",
+		"outputAbbreviatedPath": "\/assets\/hunt-and-peck1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/assets\/hunt-and-peck2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 58705,
+		"inputAbbreviatedPath": "\/assets\/hunt-and-peck2.png",
+		"outputAbbreviatedPath": "\/assets\/hunt-and-peck2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/assets\/hunt-and-peck3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 98078,
+		"inputAbbreviatedPath": "\/assets\/hunt-and-peck3.png",
+		"outputAbbreviatedPath": "\/assets\/hunt-and-peck3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
 	"\/assets\/sticks1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1705,6 +1738,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/static\/hunt-and-peck.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/hunt-and-peck.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/static\/winter.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1765,6 +1807,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/templates\/goliath.jade",
 		"outputAbbreviatedPath": "\/templates\/goliath.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/templates\/hunt-and-peck.jade": {
+		"compileDebug": 0,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/hunt-and-peck.jade",
+		"outputAbbreviatedPath": "\/templates\/hunt-and-peck.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
