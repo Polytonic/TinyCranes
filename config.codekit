@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "17682",
+"creatorBuild": "17753",
 "files": {
 	"\/assets\/flows1.png": {
 		"fileType": 32768,
@@ -1880,6 +1880,7 @@
 		"outputStyle": 1
 		},
 	"\/themes\/colors.styl": {
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"fileType": 8,
 		"ignore": 1,
@@ -1908,6 +1909,7 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/themes\/index.styl": {
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"fileType": 8,
 		"ignore": 0,
@@ -1923,6 +1925,7 @@
 		"shouldRunBless": 0
 		},
 	"\/themes\/layout.styl": {
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"fileType": 8,
 		"ignore": 1,
@@ -1938,6 +1941,7 @@
 		"shouldRunBless": 0
 		},
 	"\/themes\/queries.styl": {
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"fileType": 8,
 		"ignore": 1,
@@ -1951,17 +1955,6 @@
 		"resolveRelativeURLS": 1,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0
-		},
-	"\/tinycranes.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 156,
-		"inputAbbreviatedPath": "\/tinycranes.png",
-		"outputAbbreviatedPath": "\/tinycranes.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		}
 	},
 "hooks": [
@@ -2095,6 +2088,10 @@
 			"flagValue": -1
 			},
 		"non_empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prefer_english_operator": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2573,6 +2570,7 @@
 	"stylusAutoOutputPathReplace1": "stylus",
 	"stylusAutoOutputPathReplace2": "css",
 	"stylusAutoOutputPathStyle": 2,
+	"stylusCreateSourceMap": 0,
 	"stylusDebugStyle": 0,
 	"stylusImportCSS": 0,
 	"stylusOutputStyle": 1,
