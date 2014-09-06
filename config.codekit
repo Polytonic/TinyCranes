@@ -1899,6 +1899,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/templates\/tracking.jade": {
+		"compileDebug": 0,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/tracking.jade",
+		"outputAbbreviatedPath": "\/templates\/tracking.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/templates\/trajectory.jade": {
 		"compileDebug": 0,
 		"fileType": 512,
