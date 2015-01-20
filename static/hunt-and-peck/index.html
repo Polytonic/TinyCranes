@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Unity Web Player | Hunt & Peck</title>
+		<title>TinyCranes • Hunt & Peck</title>
 		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 		<script type="text/javascript">
 		<!--
@@ -15,13 +15,13 @@
 		<script type="text/javascript">
 		<!--
 			var config = {
-				width: 960, 
-				height: 540,
+				width: window.innerWidth,
+				height: window.innerHeight,
 				params: { enableDebugging:"0" }
-				
+
 			};
 			var u = new UnityObject2(config);
-			
+
 			jQuery(function() {
 
 				var $missingScreen = jQuery("#unityPlayer").find(".missing");
@@ -67,6 +67,10 @@
 			background-color: black;
 			color: white;
 			text-align: center;
+			margin:0px;
+			padding:0px;
+			width: 100%;
+			height: 100%;
 		}
 		a:link, a:visited {
 			color: #bfbfbf;
@@ -85,7 +89,8 @@
 		}
 		div.content {
 			margin: auto;
-			width: 960px;
+			width: 100%;
+			height: 100%;
 		}
 		div.broken,
 		div.missing {
@@ -109,14 +114,16 @@
 		}
 		div#unityPlayer {
 			cursor: default;
-			height: 540px;
-			width: 960px;
+			height: 100%;
+			width: 100%;
+		}
+		embed {
+		width: 100% !important;
 		}
 		-->
 		</style>
 	</head>
 	<body>
-		<p class="header"><span>Unity Web Player | </span>Hunt & Peck</p>
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
@@ -126,6 +133,5 @@
 				</div>
 			</div>
 		</div>
-		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 	</body>
 </html>
