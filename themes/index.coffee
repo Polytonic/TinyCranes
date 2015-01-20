@@ -33,3 +33,10 @@ $(".carousel").slick
   autoplay: true
   autoplaySpeed: 10000
   lazyLoad: "ondemand"
+
+$("#yesterday").hover toggleControls = ->
+  if @hasAttribute("controls")
+    @removeAttribute "controls"
+  else
+    @setAttribute "controls", "controls"
+  return
