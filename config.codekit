@@ -1996,6 +1996,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/templates\/yesterday.jade": {
+		"compileDebug": 0,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/yesterday.jade",
+		"outputAbbreviatedPath": "\/templates\/yesterday.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/themes\/colors.styl": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
