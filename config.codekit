@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "17756",
+"creatorBuild": "18270",
 "files": {
 	"\/assets\/flows1.png": {
 		"fileType": 32768,
@@ -64,6 +64,39 @@
 		"initialSize": 98078,
 		"inputAbbreviatedPath": "\/assets\/hunt-and-peck3.png",
 		"outputAbbreviatedPath": "\/assets\/hunt-and-peck3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/assets\/overburdened1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 191610,
+		"inputAbbreviatedPath": "\/assets\/overburdened1.png",
+		"outputAbbreviatedPath": "\/assets\/overburdened1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/assets\/overburdened2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 291703,
+		"inputAbbreviatedPath": "\/assets\/overburdened2.png",
+		"outputAbbreviatedPath": "\/assets\/overburdened2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
+		},
+	"\/assets\/overburdened3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 308246,
+		"inputAbbreviatedPath": "\/assets\/overburdened3.png",
+		"outputAbbreviatedPath": "\/assets\/overburdened3.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
@@ -1747,6 +1780,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/static\/overburdened\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/overburdened\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/static\/winter\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1873,6 +1915,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/templates\/monotony.jade",
 		"outputAbbreviatedPath": "\/templates\/monotony.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/templates\/overburdened.jade": {
+		"compileDebug": 0,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/overburdened.jade",
+		"outputAbbreviatedPath": "\/templates\/overburdened.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
@@ -2023,7 +2076,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Polytonic",
+"lastSavedByUser": "Kevin Fung",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -2423,6 +2476,10 @@
 			"flagValue": -1
 			},
 		"shelljs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"singleGroups": {
 			"active": 0,
 			"flagValue": -1
 			},
