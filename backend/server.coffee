@@ -4,6 +4,8 @@ app = do require("express")
 app.locals.newrelic = newrelic
 configure = () ->
 
+    console.log @locals.newrelic
+
     # Configure Express
     @enable "strict routing"
     @use do require("express-slash")
