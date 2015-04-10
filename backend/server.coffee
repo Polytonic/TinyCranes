@@ -2,7 +2,7 @@
 app = () ->
 
     # Enable New Relic
-    if process.NEW_RELIC_APP_NAME
+    if process.env.NEW_RELIC_APP_NAME
         @locals.newrelic = require("newrelic")
         console.log "Starting New Relic"
         console.log @locals.newrelic
