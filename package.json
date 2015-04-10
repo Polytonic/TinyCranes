@@ -7,6 +7,7 @@
         "browserify-middleware" : "latest",
         "coffee-script"         : "latest",
         "coffeeify"             : "latest",
+        "compression"           : "latest",
         "express"               : "latest",
         "express-slash"         : "latest",
         "front-matter"          : "latest",

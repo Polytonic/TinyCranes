@@ -8,6 +8,7 @@ app = () ->
     # Configure Express
     @enable "strict routing"
     @use do require("express-slash")
+    @use do require("compression")
     @set("views", "browser/partials")
     @set("view engine", "jade")
 
