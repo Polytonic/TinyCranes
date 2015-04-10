@@ -3,25 +3,24 @@
     "private" : true,
     "dependencies" : {
 
-        "bower"                 : "latest",
-        "browserify-middleware" : "latest",
-        "coffee-script"         : "latest",
-        "coffeeify"             : "latest",
-        "compression"           : "latest",
-        "express"               : "latest",
-        "express-slash"         : "latest",
-        "front-matter"          : "latest",
-        "harp"                  : "latest",
-        "jade"                  : "latest",
-        "marked"                : "latest"
+        "bower"                 : "1.4.*",
+        "browserify-middleware" : "5.0.*",
+        "coffee-script"         : "1.9.*",
+        "coffeeify"             : "1.0.*",
+        "compression"           : "1.4.*",
+        "express"               : "4.12.*",
+        "express-slash"         : "2.0.*",
+        "front-matter"          : "1.0.*",
+        "harp"                  : "0.14.*",
+        "jade"                  : "1.9.*",
+        "marked"                : "0.3.*"
 
 
     },
 
     "devDependencies" : {
 
-        "groc"       : "latest",
-        "supervisor" : "latest"
+        "supervisor" : "0.6.*"
 
     },
 
