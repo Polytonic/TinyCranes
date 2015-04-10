@@ -1,6 +1,5 @@
 # Begin Instrumentation
-if process.env.NODE_ENV == "production"
-    newrelic = require("newrelic")
+newrelic = require("newrelic") if process.env.NODE_ENV == "production"
 app = do require("express")
 app.locals.newrelic = newrelic
 configure = () ->
