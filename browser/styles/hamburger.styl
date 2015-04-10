@@ -1,6 +1,6 @@
 mDesktopWidth = 720px
 mAnimationTime = 0.4s
-mMenuOffset = 5vw
+mMenuOffset = 4vw
 
 @keyframes bounce
     0%   { transform: scale(0.0); }
@@ -18,11 +18,12 @@ mMenuOffset = 5vw
         &.fixed ul { max-width: 12rem; }
 
     ul
-
+        border-radius 0.125rem
+        box-shadow 0 0 0.5rem brick - fade - fade - fade
         width 100vw - 2 * mMenuOffset
         position fixed
         right mMenuOffset
-        top 4.5rem
+        top 4rem
         background-color cream
         visibility hidden
         overflow hidden
@@ -52,20 +53,22 @@ mMenuOffset = 5vw
         display block
         padding 1rem 2rem
         margin-left -2rem
-        border-bottom 1px solid ivory
+        border-bottom 1px solid ivory - fade - fade
         color brick
         font-weight bold
-
+        transition all mAnimationTime  * 0.75
         &:hover
             color flame
-            background-color ivory
+            background-color cream + lift
 
 
 .hamburger-button
     background-color cream
+    border-radius 0.125rem
+    box-shadow 0 0 0.5rem brick - fade - fade - fade
     cursor pointer
     position fixed
-    top 1.5rem
+    top 1rem
     right mMenuOffset
     height 2.5rem
     width 2.5rem
