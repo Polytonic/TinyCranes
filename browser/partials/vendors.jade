@@ -1,6 +1,6 @@
 //- New Relic Browser Agent
-if locals.newrelic
-    != locals.newrelic.getBrowserTimingHeader()
+if newrelic
+    != newrelic.getBrowserTimingHeader()
 
 //- Synchronous Typekit Loader
 script(src="//use.typekit.net/igt0vbc.js")
