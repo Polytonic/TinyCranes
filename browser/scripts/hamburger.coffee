@@ -16,7 +16,7 @@ checkMenu = () ->
 
     if $(window).scrollTop() > offset and not container.hasClass("fixed")
         container.addClass("fixed").find(".hamburger-button").one "animationend", ->
-            menu.addClass "has-transitions"
+            menu.addClass("has-transitions")
 
     else if $(window).scrollTop() <= offset
         #check if the menu is open when scrolling up
