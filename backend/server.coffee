@@ -1,12 +1,11 @@
 # Begin Instrumentation
 newrelic = require("newrelic") if process.env.NODE_ENV == "production"
 app = do require("express")
-app.locals.newrelic = newrelic
 configure = () ->
 
-    console.log @locals.newrelic
 
     # Configure Express
+    @locals.newrelic = newrelic
     @enable "strict routing"
     @use do require("express-slash")
     @use do require("compression")
@@ -18,8 +17,9 @@ configure = () ->
     client = "#{__dirname}/../browser/"
 
     # Setup Application Asset Pipeline
+    @get "/", (req, res) -> res.render("index")
     browserify = require("browserify-middleware")
-    @use "/index.js", browserify "#{client}/index.coffee",
+    @use "/tinycranes.js", browserify "#{client}/tinycranes.coffee",
         extensions: [".coffee"]
         transform: require("coffeeify")
     @use           require("harp")    .mount client
