@@ -1,13 +1,11 @@
-# Enable New Relic
+# Begin Instrumentation
 if process.env.NODE_ENV == "production"
     newrelic = require("newrelic")
-    console.log newrelic
-
-# Setup Application Middleware
-app = () ->
+app = do require("express")
+app.locals.newrelic = newrelic
+configure = () ->
 
     # Configure Express
-    @locals.newrelic = newrelic
     @enable "strict routing"
     @use do require("express-slash")
     @use do require("compression")
@@ -29,7 +27,7 @@ app = () ->
     # Application Routing Table
     require("./entry")(@)
     require("./portfolio")(@)
+    return @
 
-# Export the Application Object
-app = app.call do require("express")
-app.listen(process.env.PORT or 8080)
+# Start the Express Server
+configure.call(app).listen(process.env.PORT or 8080)
