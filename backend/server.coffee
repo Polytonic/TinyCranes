@@ -1,3 +1,7 @@
+# Enable New Relic
+if process.NEW_RELIC_APP_NAME
+    require("newrelic")
+
 # Setup Application Middleware
 app = () ->
 
@@ -27,9 +31,6 @@ app = () ->
     # Application Routing Table
     require("./entry")(@)
     require("./portfolio")(@)
-
-if process.NODE_ENV is "production"
-    require("newrelic")
 
 # Export the Application Object
 app = app.call do require("express")
