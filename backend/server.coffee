@@ -1,13 +1,13 @@
+# Enable New Relic
+if process.env.NODE_ENV == production
+    newrelic = require("newrelic")
+    console.log newrelic
+
 # Setup Application Middleware
 app = () ->
 
-    # Enable New Relic
-    if process.env.NEW_RELIC_APP_NAME
-        @locals.newrelic = require("newrelic")
-        console.log "Starting New Relic"
-        console.log @locals.newrelic
-
     # Configure Express
+    @locals.newrelic = newrelic
     @enable "strict routing"
     @use do require("express-slash")
     @use do require("compression")
