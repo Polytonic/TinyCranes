@@ -1,0 +1,10 @@
+{
+    "name" : "_",
+    "private" : true,
+    "dependencies" : {
+
+        "cardinal" : "latest",
+        "jquery"   : "latest",
+        "pure"     : "latest"
+
+}}

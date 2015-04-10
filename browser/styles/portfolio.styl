@@ -1,0 +1,65 @@
+mDesktopWidth = 1024px
+mBorderRadius = 2px
+
+.table-of-contents
+    background-color cream
+    color slate
+    h2 { color: slate }
+    .contents
+        max-width mDesktopWidth
+        width 90vw
+        margin 0rem auto
+        padding 3rem 1rem
+
+    .items
+        a  { font-family: "calluna-sans"; }
+        li { list-style: square; color: slate * 2 }
+        @media only screen and (max-width: 1440px) { column-count: 4; }
+        @media only screen and (max-width: 1170px) { column-count: 3; }
+        @media only screen and (max-width:  768px) { column-count: 2; }
+        @media only screen and (max-width:  568px) { column-count: 1; }
+
+.portfolio-items
+    width 100vw
+    max-width 1440px
+    margin 0rem auto
+    padding 1rem
+
+.portfolio-card
+    background-color cream
+    margin-bottom 1rem
+    border-radius mBorderRadius
+    box-shadow 0 0.1rem 0.5rem slate
+    img
+        width 100%
+        border-radius mBorderRadius mBorderRadius 0rem 0rem
+        box-shadow: 0rem 1px 1px rgba(0, 0, 0, 0.1);
+
+
+    @media only screen and (min-width: mDesktopWidth)
+        margin 1rem
+
+    color slate
+    text-rendering geometricPrecision
+
+    h2, h3
+        color brick
+        text-align center
+        margin 0rem
+    h3 { color: slate * 2 }
+
+
+.portfolio-content
+
+    padding 1rem
+    padding-bottom 0
+    p
+
+        padding-bottom 1.25rem
+
+
+.portfolio-links
+
+    margin 1rem
+    padding-bottom 0.5rem
+    text-align center

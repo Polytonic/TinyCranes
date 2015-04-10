@@ -1,0 +1,37 @@
+doctype html
+html
+
+    head
+
+        //- Define Page Attributes
+
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="author" content="Kevin Fung")
+        meta(name="description" content="Software design and development. I build things. Let's chat!")
+        block title
+
+        //- Load Required Stylesheets
+        link(rel="stylesheet" href="/bower/cardinal/cardinal.min.css")
+        link(rel="stylesheet" href="/bower/pure/grids-responsive-min.css")
+        link(rel="stylesheet" href="/index.css")
+
+        //- Load Asynchronous Javascript
+        include vendors
+
+    body
+
+        //- Navigation
+        block header
+        include hamburger
+
+        //- Primary Content
+        main#main: block content
+
+        //- Footer
+        block footer
+
+        //- Include Javascript
+        script(src="//cdn.polyfill.io/v1/polyfill.min.js")
+        script(src="/bower/jquery/dist/jquery.min.js")
+        script(src="/index.js")

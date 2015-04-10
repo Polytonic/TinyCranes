@@ -1,0 +1,33 @@
+{
+    "name" : "_",
+    "private" : true,
+    "dependencies" : {
+
+        "bower"                 : "latest",
+        "browserify-middleware" : "latest",
+        "coffee-script"         : "latest",
+        "coffeeify"             : "latest",
+        "express"               : "latest",
+        "express-slash"         : "latest",
+        "front-matter"          : "latest",
+        "harp"                  : "latest",
+        "jade"                  : "latest",
+        "marked"                : "latest"
+
+
+    },
+
+    "devDependencies" : {
+
+        "groc"       : "latest",
+        "supervisor" : "latest"
+
+    },
+
+    "scripts" : {
+
+        "start"       : "coffee backend/server.coffee",
+        "supervisor"  : "supervisor -q -e 'coffee|jade|md|styl' backend/server.coffee",
+        "postinstall" : "bower install"
+
+}}
