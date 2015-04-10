@@ -1,13 +1,11 @@
-# Enable New Relic
-if process.NEW_RELIC_APP_NAME
-    require("newrelic")
-
 # Setup Application Middleware
 app = () ->
 
-    # console.log @locals
-    # read from config file
-    # override from env
+    # Enable New Relic
+    if process.NEW_RELIC_APP_NAME
+        @locals.newrelic = require("newrelic")
+        console.log "Starting New Relic"
+        console.log @locals.newrelic
 
     # Configure Express
     @enable "strict routing"
