@@ -12,7 +12,7 @@ configure = () ->
     @set("view engine", "jade")
 
     # Force SSL Redirection in Production
-    if process.env.NODE_ENV != "production"
+    if process.env.NODE_ENV == "production"
         @use "*", (req, res, next) ->
             if req.headers["x-forwarded-proto"] != "https"
                 res.redirect "https://" + req.hostname + req.originalUrl
