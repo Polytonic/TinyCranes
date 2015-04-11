@@ -1,4 +1,4 @@
-offset = window.innerHeight # // or grab header bar element height
+offset = $(".table-of-contents").height() or window.innerHeight # // or grab header bar element height
 container = $(".hamburger-container")
 menu = $(".hamburger-links")
 
