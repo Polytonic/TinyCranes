@@ -1,4 +1,5 @@
 mDesktopWidth = 1024px
+mMobileWidth = 768px
 mBorderRadius = 2px
 
 .table-of-contents
@@ -21,14 +22,16 @@ mBorderRadius = 2px
         @media only screen and (max-width:  568px) { column-count: 1; }
 
 .portfolio-items
-    width 100vw
+    width 100%
     max-width 1440px
-    margin 0rem auto
-    padding 1rem
+    margin 1.5rem auto
+    @media only screen and (min-width: mMobileWidth)
+        margin 0rem auto
+        padding 1rem
 
 .portfolio-card
     background-color cream
-    margin-bottom 1rem
+    margin 0.75rem
     border-radius mBorderRadius
     box-shadow 0 0.1rem 0.5rem slate
     img
@@ -37,7 +40,7 @@ mBorderRadius = 2px
         box-shadow: 0rem 1px 1px rgba(0, 0, 0, 0.1);
 
 
-    @media only screen and (min-width: mDesktopWidth)
+    @media only screen and (min-width: mMobileWidth)
         margin 1rem
 
     color slate

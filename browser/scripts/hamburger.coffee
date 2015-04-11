@@ -1,4 +1,3 @@
-offset = $(".table-of-contents").height() or window.innerHeight # // or grab header bar element height
 container = $(".hamburger-container")
 menu = $(".hamburger-links")
 
@@ -13,6 +12,9 @@ $(window).scroll -> checkMenu()
 $(window).resize -> checkMenu()
 
 checkMenu = () ->
+
+    # Compute the Offset
+    offset = $(".table-of-contents").height() or window.innerHeight
 
     if $(window).scrollTop() > offset and not container.hasClass("fixed")
         container.addClass("fixed").find(".hamburger-button").one "animationend", ->
