@@ -12,10 +12,10 @@ configure = () ->
     @set("view engine", "jade")
 
     # Force SSL Redirection in Production
-    if process.env.NODE_ENV == "production"
-        @all "*", (req, res, next) ->
-            if req.secure then next()
-            else res.redirect "https://" + req.host + req.url
+    # if process.env.NODE_ENV == "production"
+    @use "*", (req, res, next) ->
+        if req.secure then next()
+        else res.redirect "https://" + req.hostname + req.originalUrl
 
     # Define Static Paths
     bower  = "#{__dirname}/../bower_components/"
