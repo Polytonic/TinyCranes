@@ -1,13 +1,13 @@
 parse = require("./shared").parse
-files = ["flows",
-         "hunt-and-peck",
+files = ["hunt-and-peck",
+        "flows",
+         "yesterday",
          "winter",
          "sticks-and-stones",
-         "overburdened",
          "trajectory",
          "fidelis",
          "midnight",
-         "yesterday",
+         "overburdened",
          "goliath",
          "footsteps",
          "apostrophe",
@@ -20,6 +20,5 @@ files = ["flows",
 items = (parse("content/portfolio", i) for i in files)
 
 module.exports = (app) ->
-
     app.use "/portfolio/", require("express").static("content/portfolio/")
     app.get "/portfolio/", (req, res) -> res.render("portfolio", items: items)

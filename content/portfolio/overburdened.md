@@ -1,7 +1,6 @@
 ---
 title: Overburdened
 subtitle: Population Control
-image: overburdened.png
 links:
     Play: overburdened/
     Source: //bitbucket.org/fungk/overburdened/
