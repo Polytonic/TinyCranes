@@ -13,9 +13,9 @@ configure = () ->
 
     # Force SSL Redirection in Production
     # if process.env.NODE_ENV == "production"
-    @use "*", (req, res, next) ->
-        if req.secure then next()
-        else res.redirect "https://" + req.hostname + req.originalUrl
+    # @use "*", (req, res, next) ->
+    #     if req.secure then next()
+    #     else res.redirect "https://" + req.hostname + req.originalUrl
 
     # Define Static Paths
     bower  = "#{__dirname}/../bower_components/"
