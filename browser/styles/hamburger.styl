@@ -108,7 +108,7 @@ mMenuOffset = 5vw
 
         // http://stackoverflow.com/questions/22621544/
         transform scale(0)          // This line breaks Safari due to a bug.
-        transform translateZ(100px) // Temporary fix for Safari
+        -webkit-transform translateZ(100px) // Temporary fix for Safari
         // Note that this breaks the "pop-out" effect when scrolling up.
 
         transition transform mAnimationTime, visibility mAnimationTime
