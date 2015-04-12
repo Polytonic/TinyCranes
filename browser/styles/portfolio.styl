@@ -11,6 +11,7 @@ mBorderRadius = 2px
         width 90vw
         margin 0rem auto
         padding 3rem 1rem
+        padding-top 1rem
 
     .items
         column-count 4
@@ -22,7 +23,7 @@ mBorderRadius = 2px
         @media only screen and (max-width:  568px) { column-count: 1; }
 
 .portfolio-items
-    width 100%
+    width 100% // I don't know why this needs to be 100% and not 100vw ...
     max-width 1440px
     margin 1.5rem auto
     @media only screen and (min-width: mMobileWidth)

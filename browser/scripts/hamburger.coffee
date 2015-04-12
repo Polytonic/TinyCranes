@@ -14,8 +14,8 @@ $(window).resize -> checkMenu()
 checkMenu = () ->
 
     # Compute the Offset
-    offset = $(".table-of-contents").height() or window.innerHeight
-
+    offset = ($(".navbar").height() * 1.25) or window.innerHeight
+    console.log offset
     if $(window).scrollTop() > offset and not container.hasClass("fixed")
         container.addClass("fixed").find(".hamburger-button").one "animationend", ->
             menu.addClass("has-transitions")

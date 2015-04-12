@@ -3,6 +3,9 @@ extends layout
 block title
     title TinyCranes • Portfolio
 
+block header
+    include header
+
 block content
 
     section.table-of-contents
@@ -23,8 +26,8 @@ block content
     section.portfolio-items.pure-g
 
         for i in items
-            div.pure-u-1.pure-u-sm-1-1.pure-u-md-1-1.pure-u-lg-1-2.pure-u-xl-1-3
-                div.portfolio-card(id="#{i.slug}")
+            div.pure-u-1.pure-u-sm-1-1.pure-u-md-1-2.pure-u-lg-1-2.pure-u-xl-1-3(id="#{i.slug}")
+                div.portfolio-card
                     if i.attributes.image
                         img(src="assets/#{i.attributes.image}")
 
