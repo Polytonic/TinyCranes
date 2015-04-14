@@ -34,6 +34,7 @@ configure = () ->
     # Application Routing Table
     require("./entry")(@)
     require("./portfolio")(@)
+    require("./rss")(@)
     return @
 
 # Start the Express Server

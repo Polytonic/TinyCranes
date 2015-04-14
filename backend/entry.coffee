@@ -9,7 +9,7 @@ slugify = (text) ->
         .trim()                     # Trim Whitespace
 
 
-files = glob.sync("**/*.md", cwd: "content/posts")
+files = glob.sync("**/**/*.md", cwd: "content/posts")
 files = (i.replace(".md", "") for i in files)
 files = (parse("content/posts", i) for i in files)
 
@@ -97,3 +97,7 @@ module.exports = (app) ->
                         return res.render("entry",
                                           entries: [post]
                                           single_post: true)
+
+
+module.exports.posts = posts
+module.exports.files = files
