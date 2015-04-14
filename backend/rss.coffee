@@ -13,6 +13,7 @@ for i in entries.files
     item_options =
         title: i.attributes.title
         description: i.body
+        author: "Kevin Fung"
         url: "https://www.tinycranes.com/blog/#{i.moment.format("YYYY/MM")}/#{i.slug}/"
         date: i.attributes.datetime
 
