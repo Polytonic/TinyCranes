@@ -11,11 +11,12 @@
         "express"               : "4.12.*",
         "express-slash"         : "2.0.*",
         "front-matter"          : "1.0.*",
+        "glob"                  : "5.0.*",
         "harp"                  : "0.14.*",
         "jade"                  : "1.9.*",
         "marked"                : "0.3.*",
+        "moment"                : "2.10.*",
         "newrelic"              : "1.18.*"
-
 
     },
 

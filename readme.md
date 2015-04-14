@@ -6,6 +6,7 @@ This is the full source code for my personal website. It's a bit of a mess, but 
 
 ## Getting Started
 Begin by setting the Google Analytics tracking code and Typekit ID. This application intended for deploy-on-push to Heroku, so you'll need to have an account there. Once the application is up and running, you'll need to set `NODE_ENV` to `production` to enable caching and other performance enhancements. For New Relic to work, set `NEW_RELIC_NO_CONFIG_FILE` to `true`
+heroku config:add TZ="America/New_York"
 
 ## Documentation
 I use a hybrid static/dynamic architecture. My original version was statically compiled using CodeKit, so portions of this are an artifact of that. Over time, the warts in this codebase should disappear. At some point, I'll document my source code with some sort of annotated viewer. Likely [groc](//github.com/nevir/groc) or [slate](//github.com/tripit/slate).

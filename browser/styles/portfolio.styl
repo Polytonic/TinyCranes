@@ -10,8 +10,9 @@ mBorderRadius = 2px
         max-width mDesktopWidth
         width 90vw
         margin 0rem auto
-        padding 3rem 1rem
-        padding-top 1rem
+
+        padding-top 1.5rem
+        padding-bottom 2rem
 
     .items
         column-count 4
@@ -22,7 +23,12 @@ mBorderRadius = 2px
         @media only screen and (max-width:  768px) { column-count: 2; }
         @media only screen and (max-width:  568px) { column-count: 1; }
 
+    section
+        text-rendering optimizeLegibility
+        margin-left 0.25rem
+
 .portfolio-items
+    background-color slate
     width 100% // I don't know why this needs to be 100% and not 100vw ...
     max-width 1440px
     margin 1.5rem auto

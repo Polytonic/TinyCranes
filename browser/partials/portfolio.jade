@@ -8,22 +8,22 @@ block header
 
 block content
 
-    section.table-of-contents
+    div.table-of-contents
         div.contents
-            h2 Professional Work
-            //- AGS; Previously, I was ...
-            p This past summer, I was a software development engineer intern inside <a href="http://aws.amazon.com">Amazon Web Services</a>. I was exposed to a variety of image processing and video encoding domain topics while working on real-time streaming backends. Before that, I was a summer student at the <a href="http://www.nrl.navy.mil/">United States Naval Research Laboratory</a>. I performed research on experimental and theoretical projects in fields of study including: underwater electrical discharges, target tracking, and parallel computing.
 
-            p For more details, check out my <a href="documents/resume.pdf">résumé</a>.
+            h2 Professional Work
+            section
+                p This past summer, I was a software development engineer intern inside <a href="http://aws.amazon.com">Amazon Web Services</a>. I was exposed to a variety of image processing and video encoding domain topics while working on real-time streaming backends. Before that, I was a summer student at the <a href="http://www.nrl.navy.mil/">United States Naval Research Laboratory</a>. I performed research on experimental and theoretical projects in fields of study including: underwater electrical discharges, target tracking, and parallel computing.
+                p For more details, check out my <a href="documents/resume.pdf">résumé</a>.
 
             h2 Undergraduate Portfolio
-            p I completed the following projects as a student in the <a href="http://www.hass.rpi.edu/pl/gaming/">Games and Simulation Arts and Sciences</a> program at <a href="http://rpi.edu/">Rensselaer Polytechnic Institute</a>. I've collaborated with many people; you should check our their portfolios too!
+            section
+                p I completed the following projects as a student in the <a href="http://www.hass.rpi.edu/pl/gaming/">Games and Simulation Arts and Sciences</a> program at <a href="http://rpi.edu/">Rensselaer Polytechnic Institute</a>. I've collaborated with many people; you should check our their portfolios too!
+                div.items: ul
+                    for i in items
+                        li: a(href="##{i.slug}") #{i.attributes.title}
 
-            div.items: ul
-                for i in items
-                    li: a(href="##{i.slug}") #{i.attributes.title}
-
-    section.portfolio-items.pure-g
+    div.portfolio-items.pure-g
 
         for i in items
             div.pure-u-1.pure-u-sm-1-1.pure-u-md-1-2.pure-u-lg-1-2.pure-u-xl-1-3(id="#{i.slug}")

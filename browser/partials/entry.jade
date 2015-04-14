@@ -1,0 +1,34 @@
+extends layout
+
+block title
+    if single_post
+        title #{entries[0].attributes.title}
+    else
+        title TinyCranes • Blog
+block description
+    if single_post
+        meta(name="description" content="#{entries[0].attributes.description}")
+    else
+        meta(name="description" content="Software design and development. I build things. Let's chat!")
+
+block header
+    include header
+
+block content
+
+    div.entry
+
+        for entry in entries
+
+            article
+                header
+                    // titles should not exceed 45 chars... as h2?
+                    if single_post
+                        h2 #{entry.attributes.title}
+                    else
+                        h2
+                            a(href="/blog/"+entry.moment.format("YYYY/MM")+"/#{entry.slug}/") #{entry.attributes.title}
+
+                    time(datetime="#{entry.attributes.datetime}") #{entry.moment.format("DD MMMM YYYY")}
+
+                section !{entry.body}

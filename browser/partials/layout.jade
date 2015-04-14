@@ -7,7 +7,8 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(name="author" content="Kevin Fung")
-        meta(name="description" content="Software design and development. I build things. Let's chat!")
+        block description
+            meta(name="description" content="Software design and development. I build things. Let's chat!")
         block title
 
         //- Load Required Stylesheets
@@ -22,12 +23,11 @@ html
 
         //- Navigation
         block header
-
         //- Primary Content
-        main: block content
-
+        block content
         //- Footer
         block footer
+            include footer
 
         //- Side Menu Navigation
         include hamburger

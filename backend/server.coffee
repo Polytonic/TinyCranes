@@ -15,7 +15,7 @@ configure = () ->
     if process.env.NODE_ENV == "production"
         @use "*", (req, res, next) ->
             if req.headers["x-forwarded-proto"] != "https"
-                res.redirect "https://" + req.hostname + req.originalUrl
+                res.redirect 301, "https://" + req.hostname + req.originalUrl
             else next()
 
     # Define Static Paths
