@@ -60,7 +60,6 @@ module.exports = (app) ->
             November:  "11"
             December:  "12"
 
-        console.log years
         res.render("archive",
                     years: years
                     months: months
