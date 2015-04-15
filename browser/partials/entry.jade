@@ -34,7 +34,8 @@ block content
 
                 //- A preview is generated if the body is longer than 600 chars ...
                 //- See line 15 in shared.coffee
-                if entry.preview
+
+                if entry.preview && !single_post
                     section.collapse
                         div.text !{entry.preview}
                         div.gradient
