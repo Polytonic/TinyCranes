@@ -29,6 +29,7 @@
 
     "scripts" : {
 
+        "datetime"    : "coffee helpers/datetime.coffee",
         "start"       : "coffee backend/server.coffee",
         "supervisor"  : "supervisor -q -e 'coffee|jade|md|styl' backend/server.coffee",
         "postinstall" : "bower install"
