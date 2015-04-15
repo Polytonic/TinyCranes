@@ -31,4 +31,14 @@ block content
 
                     time(datetime="#{entry.attributes.datetime}") #{entry.moment.format("DD MMMM YYYY")}
 
-                section !{entry.body}
+
+                //- A preview is generated if the body is longer than 600 chars ...
+                //- See line 15 in shared.coffee
+                if entry.preview
+                    section.collapse
+                        div.text !{entry.preview}
+                        div.gradient
+                    div.overflow: a(href="/blog/"+entry.moment.format("YYYY/MM")+"/#{entry.slug}/") Read More ...
+
+                else
+                    section !{entry.body}
