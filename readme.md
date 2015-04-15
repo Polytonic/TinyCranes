@@ -2,7 +2,7 @@
 [![Dependency Status](http://img.shields.io/gemnasium/Polytonic/TinyCranes.svg?style=flat-square)](https://gemnasium.com/Polytonic/TinyCranes)
 
 ## Summary
-This is the full source code for my personal website. It's a bit of a mess, but if you were interested, here you go. It was originally statically generated using [CodeKit](https://incident57.com/codekit/), so I threw this together on rather quickly on Node.js. A future rewrite will more than likely be done using Python or something with a sane, ordered-hashtable implementation.
+This is the full source code for my personal website. It's a bit of a mess, but if you were interested, here you go. It was originally statically generated using [CodeKit](https://incident57.com/codekit/), so I threw this together rather quickly on Node.js. A future rewrite will more than likely be done using Python or something with a sane, ordered-hashtable implementation.
 
 ## Getting Started
 This application intended for deploy-on-push to Heroku, so you'll need to have an account there. Once the application is up and running, you'll need to set some environment variables.
