@@ -16,12 +16,13 @@ heroku config:set TZ="America/New_York"         # Set Dyno Time Zone
 You'll also need to set a Google Analytics tracking code and configure Typekit.
 
 ## Documentation
-Blog posts are written in Markdown, and should carry a YAML Front Matter header. You must supply a title key and value, from which a slug will be generated. For sorting to work, provide a full datetime string that is compatible with [Date.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse). The meta description will be generated from the first 200 (or fewer) characters of the post. If the post body exceeds 600 characters in length, the post will trigger a truncated preview format. An example post is shown below:
+Blog posts are written in Markdown, and should carry a YAML Front Matter header. You must supply a title key and value, from which a slug will be generated. For sorting to work, provide a full datetime string that is compatible with [Date.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse). The meta description will be generated from the first 200 (or fewer) characters of the post. If the post body exceeds a certain length, the post will trigger a truncated preview format. Override the preview format by setting `preview: false`. An example post is shown below:
 
 ```markdown
 ---
 title: Second Test Post
 datetime: 2015-04-14 18:55:49 -0400
+preview: false
 ---
 She explained that they had as much as thirty pounds in gold, besides a five-pound note, and suggested that with that they might get upon a train at St. Albans or New Barnet. My brother thought that was hopeless, seeing the fury of the Londoners to crowd upon the trains, and broached his own idea of striking across Essex towards Harwich and thence escaping from the country altogether. Mrs. Elphinstone--that was the name of the woman in white--would listen to no reasoning, and kept calling upon "George"; but her sister-in-law was astonishingly quiet and deliberate, and at last agreed to my brother's suggestion.
 ```
