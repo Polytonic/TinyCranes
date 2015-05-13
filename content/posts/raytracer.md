@@ -226,7 +226,7 @@ fragColor = vec4(pow(radiance(ray) * exposure, vec3(1.0 / gamma)), 1.0);
 
 If all goes well, you should see an animated scene below! Alternately, you can check out the complete source code on [Shadertoy](https://www.shadertoy.com/view/4ljGRd).
 
-<iframe src="https://www.shadertoy.com/embed/4ljGRd?gui=true&paused=false"
+<iframe src="https://www.shadertoy.com/embed/4ljGRd?gui=true&paused=true"
         width="100%" height="380px" frameborder="0" allowfullscreen></iframe>
 
 So, to recap, this was my first foray into ray tracing. Originally, I wanted to write this using the OpenGL Compute Shader. That was harder to setup than I originally anticipated, and I spent a fair bit of time mucking around with OpenGL and cmake before deciding to just sit down and start programming.
