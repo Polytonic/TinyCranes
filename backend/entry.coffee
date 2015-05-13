@@ -28,6 +28,8 @@ for i in files
 
 module.exports = (app) ->
 
+    app.use "/uploads", require("express").static("content/uploads/")
+
     app.get "/blog/", (req, res) ->
         res.render("entry", entries: posts[files[0].moment.format("YYYY")])
 
