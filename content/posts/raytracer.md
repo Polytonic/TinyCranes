@@ -1,16 +1,13 @@
 ---
 title: Annotated Realtime Raytracing
 datetime: 2015-05-12 22:36:55 -0400
+image: /uploads/raytracer.png
 ---
 Ray tracing is a topic I have always wanted to explore, but never really had the opportunity to do so until now. What exactly is ray tracing? Consider a lamp hanging from the ceiling. Light is constantly being emitted from the lamp in the form of light rays, which bounce around the room until they hit your eye. Ray tracing follows a similar concept by simulating the path of light through a scene, except in reverse. There is no point in doing the math for light rays you cannot see!
 
 Algorithmically, ray tracing is very elegant. For each pixel, shoot a light ray from the camera through each pixel on screen. If the ray collides with geometry in the scene, create new rays that perform the same process for both reflection, as in a mirror, and refraction, as in through water. Repeat to your satisfaction.
 
-Having worked extensively with OpenCL in the past, this seemed like a good candidate to port to a parallel runtime on a GPU. Inspired by the [smallpt](http://www.kevinbeason.com/smallpt/#moreinfo) line-by-line explanation, I decided to write a parallel ray tracer with extensive annotations, using only the GLSL fragment shader drawing on a rectangle. The results are below ...
-
-![screenshot](/uploads/raytracer.png)
-
-I start with a simple ray definition, consisting of an origin point and a direction vector. I also define a directional light to illuminate my scene.
+Having worked extensively with OpenCL in the past, this seemed like a good candidate to port to a parallel runtime on a GPU. Inspired by the [smallpt](http://www.kevinbeason.com/smallpt/#moreinfo) line-by-line explanation, I decided to write a parallel ray tracer with extensive annotations, using only the GLSL fragment shader drawing on a rectangle. I start with a simple ray definition, consisting of an origin point and a direction vector. I also define a directional light to illuminate my scene.
 
 ```c
 struct Ray {
