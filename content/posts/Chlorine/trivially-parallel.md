@@ -67,4 +67,4 @@ To make things easier, there is a helper function `ch::elapsed()` which accepts 
 std::cout << "Elapsed Time: " << ch::elapsed(event) << "ns\n";
 ```
 
-Kernel files are written in a variant of the C programming language. While I won't go into detail about it here, I hope this serves as a valuable demonstration in how Chlorine may be used to easily port code to run in parallel. Up next: Visualizing the Mandelbrot Set.
+Kernel files are written in a variant of the C programming language. While I won't go into detail about it here, I hope this serves as a valuable demonstration in how Chlorine may be used to easily port code to run in parallel. Up next: [Visualizing the Mandelbrot Set](/blog/2015/05/visualizing-the-mandelbrot-set/).
