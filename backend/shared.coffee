@@ -13,7 +13,7 @@ exports.parse = (directory, filename) ->
     content = fm(content)
 
     unless content.attributes.preview == false
-      if content.body.length > 1500
+      if content.body.length > 1500 or content.attributes.preview
           content.preview = content.body.split("\n")[0]
           content.preview = md(content.preview)
       if not content.attributes.description
