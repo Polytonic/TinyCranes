@@ -8,10 +8,14 @@ slugify = (text) ->
         .replace(/\-\-+/g, "-")     # Condense Multiple `-`
         .trim()                     # Trim Whitespace
 
+drafts = glob.sync("**/**/*.md", cwd: "content/drafts")
+drafts = (i.replace(".md", "") for i in drafts)
+drafts = (parse("content/drafts", i) for i in drafts)
 
 files = glob.sync("**/**/*.md", cwd: "content/posts")
 files = (i.replace(".md", "") for i in files)
 files = (parse("content/posts", i) for i in files)
+files = files.concat(drafts) unless process.env.NODE_ENV == "production"
 
 for i in files
     i.attributes.datetime = new Date(i.attributes.datetime)
