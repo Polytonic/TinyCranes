@@ -3,7 +3,7 @@
     "private" : true,
     "dependencies" : {
 
-        "cardinal" : "3.1.*",
+        "cardinal" : "3.2.*",
         "jquery"   : "2.1.*",
         "prism"    : "latest",
         "pure"     : "0.6.*"

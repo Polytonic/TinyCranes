@@ -4,26 +4,26 @@
     "dependencies" : {
 
         "bower"                 : "1.4.*",
-        "browserify-middleware" : "5.0.*",
+        "browserify-middleware" : "7.0.*",
         "coffee-script"         : "1.9.*",
-        "coffeeify"             : "1.0.*",
-        "compression"           : "1.4.*",
-        "express"               : "4.12.*",
+        "coffeeify"             : "1.1.*",
+        "compression"           : "1.5.*",
+        "express"               : "4.13.*",
         "express-slash"         : "2.0.*",
         "front-matter"          : "1.0.*",
         "glob"                  : "5.0.*",
-        "harp"                  : "0.14.*",
-        "jade"                  : "1.9.*",
+        "harp"                  : "0.17.*",
+        "jade"                  : "1.11.*",
         "marked"                : "0.3.*",
         "moment"                : "2.10.*",
-        "newrelic"              : "1.18.*",
+        "newrelic"              : "1.21.*",
         "rss"                   : "1.1.*"
 
     },
 
     "devDependencies" : {
 
-        "supervisor" : "0.6.*"
+        "supervisor" : "0.7.*"
 
     },
 
