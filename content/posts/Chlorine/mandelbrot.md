@@ -49,6 +49,19 @@ In this post, I will cover how to draw the [Mandelbrot Set](http://en.wikipedia.
 
 </script>
 
+<noscript>
+    <h5> Mandelbrot Execution Time</h5>
+    <table>
+        <tr><td>Intel Core i5 (Reference)</td><td>4680.11ms</td></tr>
+        <tr><td>Intel Core i7 (Reference)</td><td>3480.67ms</td></tr>
+        <tr><td>Intel Core i5 (OpenCL)</td>   <td>2506.86ms</td></tr>
+        <tr><td>Intel Core i7 (OpenCL)</td>   <td>2070.07ms</td></tr>
+        <tr><td>Intel HD 5000</td>            <td>5.729ms</td></tr>
+        <tr><td>Intel Iris Pro 5200</td>      <td>4.289ms</td></tr>
+        <tr><td>Nvidia GT 750M</td>           <td>5.684ms</td></tr>
+    </table>
+</noscript>
+
 I used the following devices to generate the above figures.
 
 >**Apple MacBook Air (6,1)**
