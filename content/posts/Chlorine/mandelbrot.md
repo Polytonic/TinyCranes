@@ -3,7 +3,66 @@ title: Visualizing the Mandelbrot Set
 datetime: 2015-05-26 18:15:27 -0400
 image: /uploads/mandelbrot.png
 ---
-In hindsight, my introductory post on parallel programming was not very well thought out. Hopefully this will help clear up any previous confusion.  To recap, [Chlorine](https://github.com/Polytonic/) is an easy way to interface with OpenCL and start programming in parallel. This next post* covers the [Mandelbrot](https://github.com/Polytonic/Chlorine/tree/master/examples/mandelbrot) example.
+In this post, I will cover how to draw the [Mandelbrot Set](http://en.wikipedia.org/wiki/mandelbrot_set) using my dead simple OpenCL parallel programming framework: [Chlorine](https://github.com/Polytonic/Chlorine/). In doing so, I will demonstrate an *800x performance increase* against a reference CPU implementation, changing just *5 lines of code*. If you want to follow along, go download the [source code on GitHub](https://github.com/Polytonic/Chlorine/tree/master/examples/mandelbrot).
+
+**For the impatient, the data first:**
+
+<div style="overflow-x: auto; overflow-y: hidden;"><div id="mandelbrot-chart"></div></div>
+<script src="https://www.google.com/jsapi/"></script>
+<script>
+
+    // Load the Google Charting API
+    google.load("visualization", "1.0", {"packages":["corechart"]});
+    google.setOnLoadCallback(draw);
+    function draw() {
+
+        // Construct the Data Table
+        var data = google.visualization.arrayToDataTable([
+
+            ["Device", "Speed (ms)", { role: "style" }],
+            ["Intel Core i5 (Reference)", 4680.11, "green"],
+            ["Intel Core i7 (Reference)", 3480.67, "green"],
+            ["Intel Core i5 (OpenCL)",    2506.86, "blue"],
+            ["Intel Core i7 (OpenCL)",    2070.07, "blue"],
+            ["Intel HD 5000",             5.729,   "blue"],
+            ["Intel Iris Pro 5200",       4.289,   "blue"],
+            ["Nvidia GT 750M",            5.684,   "blue"],
+
+        ]);
+
+        // Set Google Charting Options
+        var options = {
+
+            title: "Mandelbrot Execution Time (ms)",
+            backgroundColor: { fill: "rgb(255, 250, 245)"},
+            chartArea: { width: "40%", height: "70%" },
+            hAxis: { logScale: true },
+            legend: { position: "none" }
+
+        };
+
+        // Instantiate and Draw the Chart
+        var el = document.getElementById("mandelbrot-chart");
+        var chart = new google.visualization.BarChart(el);
+        chart.draw(data, options);
+    }
+
+</script>
+
+I used the following devices to generate the above figures.
+
+>**Apple MacBook Air (6,1)**
+> - Intel Core i5-4250U @ 1.30GHz
+> - Intel HD 5000
+>
+>**Apple MacBook Pro (11,3)**
+> - Intel Core i7-4980HQ @ 2.80GHz
+> - Intel Iris Pro 5200
+> - Nvidia GT 750M
+
+As you can see, the OpenCL implementation absolutely destroys the reference CPU implementation. Granted, not much effort was put into optimizing the reference code. The point is to demonstrate the ability to significantly accelerate your code with very little time investment and effort.
+
+#### Walkthrough
 
 [The Mandelbrot Set](http://en.wikipedia.org/wiki/mandelbrot_set) is a subset of complex numbers defined by an equation that, when plotted on the complex plane, forms a fractal. One simple way of calculating the Mandelbrot Set is to iterate the series *z<sub>M</sub>* until *|M| > 2* for each *M* in the complex numbers.  If the computation does not reach this point, then *M* is in the Mandelbrot Set. A set estimation can be achieved by iterating a finite, large amount of times. This type of computation is easy to run in parallel, since each candidate can be run independently.
 
@@ -53,9 +112,9 @@ unsigned int i = get_global_id(0);
 ```
 Next we define some settings for the Mandelbrot Set we are going to generate:
 
-- We set a maximum number of iterations at a somewhat-large number to be near accurate.
+- We set a maximum number of iterations at a large number to be near accurate.
 - Since the Mandelbrot Set is completely contained within the unit circle of radius 2, we calculate only for the circumscribed square.
-- The step value is set so the resulting image is 1000px x 1000px, around the size of a computer screen.
+- The step value is set so the resulting image resolution is 1000x1000px.
 
 ```c++
     // Define Mandelbrot Settings
