@@ -118,9 +118,10 @@ result[i] = x * x + y * y <= 2 * 2 ? -1 : n;
 The key difference here is that we must iterate through the entire image using a `for` loop on the host, while in OpenCL, we can remove the `for` loop altogether, and instead retrieve the index by querying the device.
 
 ```c++
-// Host Code
+// Host Code (Reference Implementation)
 for(unsigned int i = 0; i < real.size(); i++)
-// Chlorine Kernel
+
+// Chlorine Kernel (OpenCL Implementation)
 unsigned int i = get_global_id(0);
 ```
 Next we define some settings for the Mandelbrot Set we are going to generate:
