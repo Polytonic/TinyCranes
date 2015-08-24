@@ -3,7 +3,7 @@
     "private" : true,
     "dependencies" : {
 
-        "bower"                 : "1.4.*",
+        "bower"                 : "1.5.*",
         "browserify-middleware" : "7.0.*",
         "coffee-script"         : "1.9.*",
         "coffeeify"             : "1.1.*",
@@ -16,7 +16,7 @@
         "jade"                  : "1.11.*",
         "marked"                : "0.3.*",
         "moment"                : "2.10.*",
-        "newrelic"              : "1.21.*",
+        "newrelic"              : "1.22.*",
         "rss"                   : "1.1.*"
 
     },
