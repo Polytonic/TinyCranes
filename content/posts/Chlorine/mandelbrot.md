@@ -188,5 +188,16 @@ As a matter of good practice, we compare the output to ensure that we are really
 
 From here, we write the image to the (very simple) [PPM](http://en.wikipedia.org/wiki/Netpbm_format) format, which you can display using [ImageMagick](http://www.imagemagick.org/), [Adobe Photoshop](www.adobe.com/products/photoshop.html), or similar. If all goes well, you should see the same image as the one at the top of this document.
 
+If you were wondering, the five lines of code that differ between the reference and OpenCL implementations:
+
+```cpp
+#include "chlorine.hpp"             // the include statement.
+ch::Worker benoit("mandelbrot.cl"); // worker creation.
+void solve_mandelbrot(...)          // function prototype (moved to kernel).
+unsigned int i = get_global_id(0);  // indexing inside a kernel
+benoit.call(...);                   // the function call.
+```
+
+You're probably thinking *"can I get away with doing a mass find/replace?"* What do you think I did? Yes, *it's that easy* to use [Chlorine](https://github.com/Polytonic/Chlorine/). Give it a try today!
 
 *<sub>A significant portion of this was written in collaboration with fellow Rensselaer student [Christopher Brenon](https://github.com/breadknock).</sub>
