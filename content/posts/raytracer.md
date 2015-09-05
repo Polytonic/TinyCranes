@@ -3,11 +3,14 @@ title: Annotated Realtime Raytracing
 datetime: 2015-05-12 22:36:55 -0400
 image: /uploads/raytracer.png
 ---
-Ray tracing is a topic I have always wanted to explore, but never really had the opportunity to do so until now. What exactly is ray tracing? Consider a lamp hanging from the ceiling. Light is constantly being emitted from the lamp in the form of light rays, which bounce around the room until they hit your eye. Ray tracing follows a similar concept by simulating the path of light through a scene, except in reverse. There is no point in doing the math for light rays you cannot see!
+Ever wonder how a raytracer works? No really, a line-by-line explanation, and not some academic paper filled with technical jargon? Want to see a GPU raytracer running in realtime, in your browser window? Well here you go: if you're impatient, [click here to go straight to the demo](https://www.tinycranes.com/blog/2015/05/annotated-realtime-raytracing/#live-demo), or read on for the more detailed walkthrough.
+
+
+So what exactly is ray tracing? Consider a lamp hanging from the ceiling. Light is constantly being emitted from the lamp in the form of light rays, which bounce around the room until they hit your eye. Ray tracing follows a similar concept by simulating the path of light through a scene, except in reverse. There is no point in doing the math for light rays you cannot see!
 
 Algorithmically, ray tracing is very elegant. For each pixel, shoot a light ray from the camera through each pixel on screen. If the ray collides with geometry in the scene, create new rays that perform the same process for both reflection, as in a mirror, and refraction, as in through water. Repeat to your satisfaction.
 
-Having worked extensively with OpenCL in the past, this seemed like a good candidate to port to a parallel runtime on a GPU. Inspired by the [smallpt](http://www.kevinbeason.com/smallpt/#moreinfo) line-by-line explanation, I decided to write a parallel ray tracer with extensive annotations, using only the GLSL fragment shader drawing on a rectangle. I start with a simple ray definition, consisting of an origin point and a direction vector. I also define a directional light to illuminate my scene.
+Having worked extensively with OpenCL in the past, this seemed like a good candidate to port to a parallel runtime on a GPU. Inspired by the [smallpt](http://www.kevinbeason.com/smallpt/#moreinfo) line-by-line explanation, I decided to write a parallel ray tracer with extensive annotations, using only the GLSL fragment shader drawing on a rectangle (i.e. "2D Quad"). I start with a simple ray definition, consisting of an origin point and a direction vector. I also define a directional light to illuminate my scene.
 
 ```c
 struct Ray {
@@ -221,11 +224,12 @@ Ray ray = Ray(vec3(0.0, 2.5, 12.0), normalize(vec3(uv.x, uv.y, -1.0)));
 fragColor = vec4(pow(radiance(ray) * exposure, vec3(1.0 / gamma)), 1.0);
 ```
 
-If all goes well, you should see an animated scene below! Alternately, you can check out the complete source code on [Shadertoy](https://www.shadertoy.com/view/4ljGRd).
+If all goes well, you should see an animated scene below, assuming your computer isn't a potato! Alternately, you can check out the complete source code on [Shadertoy](https://www.shadertoy.com/view/4ljGRd).
 
-<iframe src="https://www.shadertoy.com/embed/4ljGRd?gui=true&paused=true"
+<iframe id="live-demo"
+        src="https://www.shadertoy.com/embed/4ljGRd?gui=true&paused=true"
         width="100%" height="380px" frameborder="0" allowfullscreen></iframe>
 
 So, to recap, this was my first foray into ray tracing. Originally, I wanted to write this using the OpenGL Compute Shader. That was harder to setup than I originally anticipated, and I spent a fair bit of time mucking around with OpenGL and cmake before deciding to just sit down and start programming.
 
-All things considered, this is a pretty limited ray tracer. Some low hanging fruit might be to add anti-aliasing and soft shadows. The former was not an issue until I ported this from a HiDPI display onto the WebGL canvas. The latter involves finding a quality random number generator. Maybe a summer project before I start working ...
+All things considered, this is a pretty limited ray tracer. Some low hanging fruit might be to add anti-aliasing and soft shadows. The former was not an issue until I ported this from a HiDPI display onto the WebGL canvas. The latter involves finding a quality random number generator.
