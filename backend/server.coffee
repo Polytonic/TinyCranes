@@ -22,8 +22,11 @@ configure = () ->
     bower  = "#{__dirname}/../bower_components/"
     client = "#{__dirname}/../browser/"
 
+    # Experiment ... (see entry.coffee#L37)
+    @get "/index/", (req, res) -> res.render("index")
+    # @get "/", (req, res) -> res.render("index")
+
     # Setup Application Asset Pipeline
-    @get "/", (req, res) -> res.render("index")
     browserify = require("browserify-middleware")
     @use "/tinycranes.js", browserify "#{client}/tinycranes.coffee",
         extensions: [".coffee"]
