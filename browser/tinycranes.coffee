@@ -11,4 +11,4 @@ $(document).ready () ->
 $(window).load () ->
     $("#spinner").fadeOut 1000, () ->
         $("#splashscreen").fadeOut(500)
-        $("body").css("overflow", "auto")
+        $("body").css("overflow", "visible")
