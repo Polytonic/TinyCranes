@@ -1,4 +1,5 @@
 # Load Vendor Scripts
+require("fastclick")(document.body)
 require("./vendor/prism.js")
 
 # Load Local Scripts
