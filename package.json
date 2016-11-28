@@ -1,38 +1,33 @@
 {
-    "name" : "_",
-    "private" : true,
-    "dependencies" : {
-
-        "bower"                 : "1.7.*",
-        "browserify-middleware" : "7.0.*",
-        "coffee-script"         : "1.10.*",
-        "coffeeify"             : "2.0.*",
-        "compression"           : "1.6.*",
-        "express"               : "4.13.*",
-        "express-slash"         : "2.0.*",
-        "fastclick"             : "1.0.*",
-        "front-matter"          : "2.0.*",
-        "glob"                  : "7.0.*",
-        "harp"                  : "0.20.*",
-        "jade"                  : "1.11.*",
-        "marked"                : "0.3.*",
-        "moment"                : "2.12.*",
-        "newrelic"              : "1.26.*",
-        "rss"                   : "1.2.*"
-
+    "name": "_",
+    "private": true,
+    "dependencies": {
+        "bower": "1.7.*",
+        "browserify-middleware": "7.1.*",
+        "coffee-script": "1.11.*",
+        "coffeeify": "2.0.*",
+        "compression": "1.6.*",
+        "express": "4.14.*",
+        "express-slash": "2.0.*",
+        "fastclick": "1.0.*",
+        "front-matter": "2.1.*",
+        "glob": "7.1.*",
+        "harp": "0.23.*",
+        "jade": "1.11.*",
+        "marked": "0.3.*",
+        "moment": "2.17.*",
+        "newrelic": "1.34.*",
+        "rss": "1.2.*",
+        "stylus": "^0.54.5"
     },
-
-    "devDependencies" : {
-
-        "supervisor" : "0.10.*"
-
+    "devDependencies": {
+        "supervisor": "0.12.*"
     },
-
-    "scripts" : {
-
-        "datetime"    : "coffee helpers/datetime.coffee",
-        "start"       : "coffee backend/server.coffee",
-        "supervisor"  : "supervisor -q -e 'coffee|jade|md|styl' backend/server.coffee",
-        "postinstall" : "bower install"
-
-}}
+    "scripts": {
+        "datetime": "coffee helpers/datetime.coffee",
+        "start": "coffee backend/server.coffee",
+        "supervisor": "supervisor -q -e 'coffee|jade|md|styl' backend/server.coffee",
+        "preinstall": "npm install -g bower",
+        "postinstall": "bower install"
+    }
+}
