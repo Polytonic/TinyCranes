@@ -34,10 +34,6 @@ module.exports = (app) ->
 
     app.use "/uploads", require("express").static("content/uploads/")
 
-    # Experiment ... (see server.coffee#L25)
-    app.get "/", (req, res) ->
-        res.render("entry", entries: posts[files[0].moment.format("YYYY")])
-
     app.get "/blog/", (req, res) ->
         res.render("entry", entries: posts[files[0].moment.format("YYYY")])
 
