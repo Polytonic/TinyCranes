@@ -4,7 +4,7 @@
     "dependencies": {
         "cardinal": "3.6.*",
         "jquery": "2.1.*",
-        "prism": "1.4.*",
-        "pure": "0.6.*"
+        "prism": "1.6.*",
+        "pure": "1.0.*"
     }
 }
