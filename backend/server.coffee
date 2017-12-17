@@ -1,10 +1,7 @@
-# Begin Instrumentation
-newrelic = require("newrelic") if process.env.NODE_ENV == "production"
 app = do require("express")
 configure = () ->
 
     # Configure Express
-    @locals.newrelic = newrelic
     @enable "strict routing"
     @use do require("express-slash")
     @use do require("compression")
